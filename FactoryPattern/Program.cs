@@ -11,6 +11,8 @@ namespace FactoryPattern
 
             var newVehicle = VehicleFactory.GetVehicle(wheelCount);
             newVehicle.Drive();
+            Console.WriteLine($"This vehicle has {newVehicle.NumOfWheels} wheels.");
+
         }
     }
 }

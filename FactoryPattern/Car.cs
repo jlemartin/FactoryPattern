@@ -7,6 +7,8 @@ namespace FactoryPattern
         {
         }
 
+        public int NumOfWheels { get; set; } = 4;
+
         public void Drive()
         {
             Console.WriteLine("Building a Car!");
