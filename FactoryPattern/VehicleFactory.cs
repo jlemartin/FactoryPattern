@@ -3,34 +3,21 @@ namespace FactoryPattern
 {
     public static class VehicleFactory
     {
-        public static IVehicle GetVehicle(int tires)
+        public static IVehicle GetVehicle(int wheels)
         {
-            if (tires == 2)
+            switch (wheels)
             {
-                return new Motorcycle();
-            }
-            else if (tires == 4)
-            {
-                Console.WriteLine("Car or BigRig?");
-                Console.WriteLine("For a Car, enter 1");
-                Console.WriteLine("For a BigRig, enter 2");
-                var whichOne = Convert.ToInt64(Console.ReadLine());
-
-                if (whichOne == 1)
-                {
+                case 2:
+                    return new Motorcycle();
+                case 4:
                     return new Car();
-                }
-                else if (whichOne == 2)
-                {
+                case 18:
                     return new BigRig();
-
-                }
-                else
-                {
-                    Console.WriteLine("Undecided?");
-                }
-                
+                default:
+                    return new Car();
             }
+
+           
         }
 
     }

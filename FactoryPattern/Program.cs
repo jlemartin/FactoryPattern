@@ -6,7 +6,11 @@ namespace FactoryPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Enter number of wheels for vehicle:");
+            var wheelCount = Convert.ToInt32(Console.ReadLine());
+
+            var newVehicle = VehicleFactory.GetVehicle(wheelCount);
+            newVehicle.Drive();
         }
     }
 }
