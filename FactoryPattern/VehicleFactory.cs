@@ -1,6 +1,7 @@
 ﻿using System;
 namespace FactoryPattern
 {
+    // Where the IVehicles are 'made' - static class
     public static class VehicleFactory
     {
         public static IVehicle GetVehicle(int wheels)
